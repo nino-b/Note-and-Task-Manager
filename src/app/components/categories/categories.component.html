@@ -1,0 +1,18 @@
+<div>
+  <h2>Categories</h2>
+  <ul cdkDropList (cdkDropListDropped)="drop($event)" >
+    @for (category of categories; track $index) {
+      <li cdkDrag>
+        <button 
+          class="element"
+          [ngClass]="{ 'underline': selectedCategory === category }"
+          (click)="selectCategory(category)"
+        >{{ category }}</button>
+      </li>
+    }
+    <li>
+      <button class="element">All</button>
+    </li>
+  </ul>
+  <a routerLink="/categories">&#x279E;</a>
+</div>

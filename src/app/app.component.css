@@ -1,0 +1,17 @@
+#layout {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: auto;
+}
+
+#header {
+  grid-column: 1 / span 10;
+}
+
+#categories {
+  grid-column: 1;
+}
+
+main {
+  grid-column: 3 / span 8;
+}

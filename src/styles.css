@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --yellow-light: #fcda45;
+  --yellow-middle: #fccf3a;
+  --yellow-dark: #ffa028;
+
+  --border-radius: 1rem;
+} 
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+
+
+/* Underline effect */
+
+.element {
+  position: relative;
+  transform: scale(1);
+  transition: transform .3s ease-in-out;
+}
+
+.element:hover {
+  cursor: pointer;
+}
+
+.element:active {
+  transform: scale(1.1);
+}
+
+.element::after {
+  content: "";
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: 0;
+  height: 1.5px;
+  width: 0;
+  background-color: black;
+  transform: translateX(-50%);
+  transition: width .3s ease;
+}
+
+.element:hover::after {
+  width: 100%;
+}
+
+.element:active::after {
+  width: 100%;
+  transition: width .3s ease forwards;
+}
+
+/* Persist underline for clicked links */
+.underline::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 1.5px;
+  width: 100%;
+  background-color: black;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,24 @@
+input {
+  padding: 0 .5rem .2rem .5rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 2px solid black;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.727);
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: rgba(131, 130, 130, 0.474);
+}
