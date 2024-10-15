@@ -1,24 +1,39 @@
+form {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  transition: transform .3s ease;
+}
+form:focus-within {
+  transform: translate(-.2rem, -.2rem);
+}
+
 input {
   padding: 0 .5rem .2rem .5rem;
+  width: 100%;
   background-color: transparent;
   border: 1px solid transparent;
   border-bottom: 2px solid black;
 }
-
 input:focus-visible {
   outline: none;
 }
-
 input::placeholder {
   color: rgba(0, 0, 0, 0.727);
 }
 
+
 button {
+  position: absolute;
+  right: 0;
+  top: -10%;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 50%;
 }
-
 button:hover {
-  background-color: rgba(131, 130, 130, 0.474);
+  background-color: rgba(131, 130, 130, 0.374);
+}
+button:active {
+  background-color: rgba(131, 130, 130, 0.648);
 }

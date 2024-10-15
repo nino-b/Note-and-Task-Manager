@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
+  @ViewChild('search') search!: ElementRef;
 
+  onClear(event: Event) {
+    event.preventDefault();
+    const input = this.search.nativeElement;
+    input.value = '';
+    input.focus();
+  }
 }

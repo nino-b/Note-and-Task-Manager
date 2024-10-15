@@ -1,5 +1,7 @@
 <div>
   <h2>Categories</h2>
+  <app-search id="search"/>
+  <button id="reset">All</button>
   <ul cdkDropList (cdkDropListDropped)="drop($event)" >
     @for (category of categories; track $index) {
       <li cdkDrag>
@@ -10,9 +12,5 @@
         >{{ category }}</button>
       </li>
     }
-    <li>
-      <button class="element">All</button>
-    </li>
   </ul>
-  <a routerLink="/categories">&#x279E;</a>
 </div>

@@ -1,4 +1,11 @@
 <form>
-  <input type="text" name="search" placeholder="Search...">
-  <button>✕</button>
+  <input 
+    type="text" 
+    name="search" 
+    #search 
+    autocomplete="off" 
+    placeholder="Search...">
+  <button 
+    type="button" 
+    (click)="onClear($event)">✕</button>
 </form>
