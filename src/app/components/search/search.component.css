@@ -5,7 +5,7 @@ form {
   transition: transform .3s ease;
 }
 form:focus-within {
-  transform: translate(-.2rem, -.2rem);
+  transform: translate(.2rem, -.2rem);
 }
 
 input {

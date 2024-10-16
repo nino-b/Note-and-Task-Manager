@@ -1,16 +1,17 @@
-<div>
+<div id="categories">
   <h2>Categories</h2>
   <app-search id="search"/>
-  <button id="reset">All</button>
+
   <ul cdkDropList (cdkDropListDropped)="drop($event)" >
     @for (category of categories; track $index) {
       <li cdkDrag>
         <button 
           class="element"
-          [ngClass]="{ 'underline': selectedCategory === category }"
-          (click)="selectCategory(category)"
-        >{{ category }}</button>
+          [ngClass]="{ 'underline': selectedCategory === category.name }"
+          (click)="selectCategory(category.name)"
+        >{{ category.name }}<span> (0)</span></button>
       </li>
     }
   </ul>
+  <button id="show-all">Show All</button>
 </div>

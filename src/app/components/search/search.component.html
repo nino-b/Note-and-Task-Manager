@@ -3,9 +3,12 @@
     type="text" 
     name="search" 
     #search 
+    [(ngModel)]="searchText"
     autocomplete="off" 
     placeholder="Search...">
-  <button 
+  @if (searchText) {
+    <button 
     type="button" 
     (click)="onClear($event)">✕</button>
+  }
 </form>
